@@ -1,0 +1,230 @@
+<!-- SLIDER END -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <!-- HOME SECTION 1 -->
+            <div class="padding-top-60">
+                <h3 class="margin-bottom-15"><b>Videos</b></h3>
+                <div class="row style5">
+                    <div *ngFor="let video of videos">
+                        <div class="col-sm-8" *ngIf="video.active == 1">
+                            <article class="style4">
+                                <a href="{{video.linkPost}}">
+                                    <div class="overlay overlay-02"></div>
+                                    <div class="post-thumb">
+                                        <div class="post-excerpt">
+                                            <div class="meta">
+                                                <span class="date">{{video.createdAt}}</span>
+                                            </div>
+                                            <h3 class="text-white">{{video.title}}</h3>
+                                            <div class="meta">
+                                                <span class="author"> by {{video.createdBy}}</span>
+                                                <span class="views pull-right"><i class="fa fa-eye"></i> {{video.views}}
+                                                    views</span>
+                                            </div>
+                                        </div>
+                                        <img src="{{video.img}}" class="bg-img img-full" alt="">
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
+                        <div class="col-sm-4" *ngIf="video.active != 1">
+                            <article class="style4">
+                                <a href="{{video.linkPost}}">
+                                    <div class="overlay overlay-02"></div>
+                                    <div class="post-thumb">
+                                        <div class="post-excerpt">
+                                            <div class="meta">
+                                                <span class="date">{{video.createdAt}}</span>
+                                            </div>
+                                            <h3 class="text-white">{{video.title}}</h3>
+                                            <div class="meta">
+                                                <span class="author"> by {{video.createdBy}}</span>
+                                                <span class="views pull-right"><i class="fa fa-eye"></i> {{video.views}}
+                                                    views</span>
+                                            </div>
+                                        </div>
+                                        <img src="{{video.img}}" class="bg-img img-full" alt="">
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- ASIDE 1  -->
+        <aside class="col-md-4 padding-top-60">
+            <div class="side-widget">
+                <div class="ad-banner">
+                    <span>Advertisement</span>
+                    <img src="assets/img/ads/1.jpg" class="img-responsive" alt="" />
+                </div>
+            </div>
+            <div class="side-widget">
+                <h4>Activity</h4>
+                <div class="mini-posts">
+                    <article class="style2" *ngFor="let article of articles">
+                        <div class="row">
+                            <div class="col-md-4 col-sm-4">
+                                <a href="{{article.linkPost}}">
+                                    <div class="article-thumb">
+                                        <img src="{{article.img}}" class="img-responsive" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-8 col-sm-8">
+                                <div class="post-excerpt no-padding">
+                                    <h5><a href="{{article.linkPost}}">{{article.title}}</a></h5>
+                                    <div class="meta">
+                                        <span>{{article.createdAt}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </aside>
+        <!-- // ASIDE 1  -->
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <!-- HOME SECTION 1 -->
+            <div class="padding-top-60">
+                <h3 class="margin-bottom-15"><b>People</b></h3>
+                <div class="row style5">
+                    <div *ngFor="let people of peoples">
+                        <div class="col-sm-8" *ngIf="people.active == 1">
+                            <article class="style4">
+                                <a href="{{people.linkPost}}">
+                                    <div class="overlay overlay-02"></div>
+                                    <div class="post-thumb">
+                                        <div class="post-excerpt">
+                                            <div class="meta">
+                                                <span class="date">{{people.createdAt}}</span>
+                                            </div>
+                                            <h3 class="text-white">{{people.title}}</h3>
+                                            <div class="meta">
+                                                <span class="author"> by {{people.createdBy}}</span>
+                                                <span class="views pull-right"><i class="fa fa-eye"></i>
+                                                    {{people.views}} views</span>
+                                            </div>
+                                        </div>
+                                        <img src="{{people.img}}" class="bg-img img-full" alt="">
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
+                        <div class="col-sm-4" *ngIf="people.active != 1">
+                            <article class="style4">
+                                <a href="{{people.linkPost}}">
+                                    <div class="overlay overlay-02"></div>
+                                    <div class="post-thumb">
+                                        <div class="post-excerpt">
+                                            <div class="meta">
+                                                <span class="date">{{people.createdAt}}</span>
+                                            </div>
+                                            <h3 class="text-white">{{people.title}}</h3>
+                                            <div class="meta">
+                                                <span class="author"> by {{people.createdBy}}</span>
+                                                <span class="views pull-right"><i class="fa fa-eye"></i>
+                                                    {{people.views}} views</span>
+                                            </div>
+                                        </div>
+                                        <img src="{{people.img}}" class="bg-img img-full" alt="">
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- ASIDE 1  -->
+        <div class="col-md-4">
+            <!-- HOME SECTION 1 -->
+            <div class="padding-top-60">
+                <h3 class="margin-bottom-15"><b>Channel</b></h3>
+                <div class="row style5">
+                    <div *ngFor="let channel of channels">
+                        <div class="col-sm-6">
+                            <article class="style4">
+                                <a href="{{channel.linkPost}}">
+                                    <div class="overlay overlay-02"></div>
+                                    <div class="post-thumb">
+                                        <div class="small-title cat">{{channel.title}}</div>
+                                        <img src="{{channel.img}}" class="bg-img img-full" alt="">
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- // ASIDE 1  -->
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <!-- HOME SECTION 1 -->
+            <div class="padding-top-60">
+                <h3 class="margin-bottom-15"><b>Document</b></h3>
+                <div class="row style5">
+                    <div *ngFor="let video of videos">
+                        <div class="col-sm-8" *ngIf="video.active == 1">
+                            <article class="style4">
+                                <a href="{{video.linkPost}}">
+                                    <div class="overlay overlay-02"></div>
+                                    <div class="post-thumb">
+                                        <div class="post-excerpt">
+                                            <div class="meta">
+                                                <span class="date">{{video.createdAt}}</span>
+                                            </div>
+                                            <h3 class="text-white">{{video.title}}</h3>
+                                            <div class="meta">
+                                                <span class="author"> by {{video.createdBy}}</span>
+                                                <span class="views pull-right"><i class="fa fa-eye"></i> {{video.views}}
+                                                    views</span>
+                                            </div>
+                                        </div>
+                                        <img src="{{video.img}}" class="bg-img img-full" alt="">
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
+                        <div class="col-sm-4" *ngIf="video.active != 1">
+                            <article class="style4">
+                                <a href="{{video.linkPost}}">
+                                    <div class="overlay overlay-02"></div>
+                                    <div class="post-thumb">
+                                        <div class="post-excerpt">
+                                            <div class="meta">
+                                                <span class="date">{{video.createdAt}}</span>
+                                            </div>
+                                            <h3 class="text-white">{{video.title}}</h3>
+                                            <div class="meta">
+                                                <span class="author"> by {{video.createdBy}}</span>
+                                                <span class="views pull-right"><i class="fa fa-eye"></i> {{video.views}}
+                                                    views</span>
+                                            </div>
+                                        </div>
+                                        <img src="{{video.img}}" class="bg-img img-full" alt="">
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
